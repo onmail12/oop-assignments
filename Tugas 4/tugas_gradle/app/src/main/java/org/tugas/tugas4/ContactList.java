@@ -1,7 +1,6 @@
 package org.tugas.tugas4;
 
 import java.util.ArrayList;
-
 import org.tugas.tugas4.Contacts.*;
 
 public class ContactList {
@@ -56,7 +55,13 @@ public class ContactList {
       int counter = 1;
 
       for (Contact contact : this.contacts) {
-        System.out.println(counter + ". " + contact.getName());
+        String contactName = counter + ". " + contact.getName();
+        if (contact instanceof PersonalContact) {
+          contactName += " - Personal";
+        } else if (contact instanceof BusinessContact) {
+          contactName += " - Business";
+        }
+        System.out.println(contactName);
         counter++;
       }
     } else {

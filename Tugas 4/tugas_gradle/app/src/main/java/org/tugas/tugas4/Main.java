@@ -1,7 +1,6 @@
 package org.tugas.tugas4;
 
 import java.util.Scanner;
-
 import org.tugas.tugas4.Contacts.*;
 
 public class Main {
@@ -9,9 +8,6 @@ public class Main {
 
     public static void main() {
         ContactList contactList = new ContactList();
-        BusinessContact bcontact = new BusinessContact("a", "a", "a", "Organization");
-        System.out.println(bcontact.toString());
-        contactList.addContact(bcontact);
 
         while (true) {
             displayMenu();
@@ -21,13 +17,13 @@ public class Main {
                 switch (choice) {
                     case 1:
                         contactList.displayAllContact();
-                        System.out.print("Press enter to continue");
+                        System.out.print("Press enter to continue"); 
                         scanner.nextLine();
                         break;
                     case 2:
                         System.out.println("1. Default Contact");
                         System.out.println("2. Personal Contact");
-                        System.out.println("3. BusinessContact");
+                        System.out.println("3. Business Contact");
                         System.out.print("Choose a contact type:");
 
                         int contactType = scanner.nextInt();
